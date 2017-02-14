@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/developersworkspace/DirVault#readme",
   "dependencies": {
+    "commander": "^2.9.0",
     "crypto": "0.0.3",
     "recursive-readdir": "^2.1.0"
   }
