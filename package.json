@@ -1,6 +1,6 @@
 {
   "name": "dir-vault",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A directory encryption/decryption command-line interface written in Node",
   "main": "./src/app.js",
   "scripts": {

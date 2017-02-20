@@ -1,6 +1,3 @@
-// node app.js -p hello -d "F:\Temp\Source" "F:\Temp\Destination"
-// node app.js -p hello -d "F:\Temp\Destination" "F:\Temp\Source"
-
 var crypto = require('crypto');
 var recursive = require('recursive-readdir');
 var fs = require('fs');
@@ -8,18 +5,19 @@ var zlib = require('zlib');
 var path = require('path');
 var program = require('commander');
 
-
 program
     .arguments('<source> <destination>')
-    .option('-p, --password <password>', 'The AES password')
+    .option('-p, --password <password>', 'AES password')
     .option('-e, --encrypt', 'Encrypt')
     .option('-d, --decrypt', 'Decrypt')
-    .option('-c, --clean', 'Deletes files after encrypt/decrypt')
+    .option('-c, --clean', 'Deletes source files after encrypt/decrypt')
     .action(function (sourceDirectory, destinationDirectory) {
         if (program.encrypt == true) {
             encryptDirectory(sourceDirectory, destinationDirectory, program.password, program.clean);
         } else if (program.decrypt == true) {
             decryptDirectory(sourceDirectory, destinationDirectory, program.password, program.clean);
+        }else {
+            console.log('missing encrypt/decrypt option. See help for more info. \r\n\r\n \'dir-vault --help\' ');
         }
     })
     .parse(process.argv);

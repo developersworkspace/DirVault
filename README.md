@@ -1,8 +1,18 @@
 # DirVault
 
-For help:
 
-`dir-vault -h`
+```
+Usage: app [options] <source> <destination>
+
+  Options:
+
+    -h, --help                 output usage information
+    -p, --password <password>  AES password
+    -e, --encrypt              Encrypt
+    -d, --decrypt              Decrypt
+    -c, --clean                Deletes source files after encrypt/decrypt
+
+```
 
 Example: 
 
