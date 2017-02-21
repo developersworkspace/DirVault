@@ -2,7 +2,7 @@
 
 
 ```
-Usage: app [options] <source> <destination>
+Usage: dir-vault [options] <source> <destination>
 
   Options:
 
